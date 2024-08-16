@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта Богородского городского округа, Московской области</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<YOUR_API_KEY>&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init() {
+            // Создание карты, центрируем на Ногинске
+            var myMap = new ymaps.Map("map", {
+                center: [55.866735, 38.463233], // Центр карты (Ногинск)
+                zoom: 12
+            });
+
+            // Получение данных о площадках из API
+            fetch('https://your-server.com/api/playgrounds')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(function(item) {
+                        var placemark = new ymaps.Placemark([item.latitude, item.longitude], {
+                            balloonContentHeader: item.description,
+                            balloonContentBody: `
+                                <img src='${item.photo_paths.split(',')[0]}' alt='Фото площадки'><br>
+                                Депутат: ${item.deputy}
+                            `,
+                            balloonContentFooter: "Категория: Открытый"  // Замените или уберите, если нет такого поля
+                        });
+
+                        myMap.geoObjects.add(placemark);
+                    });
+                });
+        }
+    </script>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+</body>
+</html>
