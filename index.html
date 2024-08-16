@@ -9,29 +9,56 @@
         ymaps.ready(init);
 
         function init() {
-            // Создание карты, центрируем на Ногинске
-            var myMap = new ymaps.Map("map", {
-                center: [55.866735, 38.463233], // Центр карты (Ногинск)
-                zoom: 12
-            });
-
-            // Получение данных о площадках из API
-            fetch('https://your-server.com/api/playgrounds')
-                .then(response => response.json())
-                .then(data => {
-                    data.forEach(function(item) {
-                        var placemark = new ymaps.Placemark([item.latitude, item.longitude], {
-                            balloonContentHeader: item.description,
-                            balloonContentBody: `
-                                <img src='${item.photo_paths.split(',')[0]}' alt='Фото площадки'><br>
-                                Депутат: ${item.deputy}
-                            `,
-                            balloonContentFooter: "Категория: Открытый"  // Замените или уберите, если нет такого поля
-                        });
-
-                        myMap.geoObjects.add(placemark);
-                    });
+            try {
+                // Создание карты, центрируем на Ногинске
+                var myMap = new ymaps.Map("map", {
+                    center: [55.866735, 38.463233], // Центр карты (Ногинск)
+                    zoom: 12
                 });
+
+                // Здесь добавлены метки для разных площадок
+                var placemarks = [
+                    {
+                        coords: [55.866735, 38.463233],
+                        header: "Стадион при МБОУ \"Центр образования № 3\"",
+                        body: "г. Ногинск, ул. Юбилейная, д. 13<br>Депутат: Иванов Иван Иванович",
+                        footer: "Категория: Открытый"
+                    },
+                    {
+                        coords: [55.870000, 38.470000],
+                        header: "Стадион при МБОУ \"Центр образования №4\"",
+                        body: "г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Петров Петр Петрович",
+                        footer: "Категория: Открытый"
+                    },
+                    // Добавление всех остальных меток
+                    {
+                        coords: [55.875000, 38.460000],
+                        header: "Стадион при МБОУ \"Центр образования \"Богородский\"",
+                        body: "г. Ногинск, ул. 2-ая Глуховская, д. 11<br>Депутат: Сидоров Сидор Сидорович",
+                        footer: "Категория: Открытый"
+                    },
+                    {
+                        coords: [55.860000, 38.470000],
+                        header: "Спортивное ядро Истомкино",
+                        body: "г. Ногинск, ул. Юбилейная, д. 30<br>Депутат: Фёдоров Фёдор Фёдорович",
+                        footer: "Категория: Открытый"
+                    }
+                    // Добавьте оставшиеся метки здесь
+                ];
+
+                // Добавление меток на карту
+                placemarks.forEach(function(item) {
+                    var placemark = new ymaps.Placemark(item.coords, {
+                        balloonContentHeader: item.header,
+                        balloonContentBody: item.body,
+                        balloonContentFooter: item.footer
+                    });
+
+                    myMap.geoObjects.add(placemark);
+                });
+            } catch (e) {
+                console.error("Ошибка при инициализации карты:", e);
+            }
         }
     </script>
 </head>
