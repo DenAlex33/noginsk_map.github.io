@@ -44,5 +44,20 @@
             "photos/3_2.jpg"
         ],
         "photo": "photos/AgACAgIAAxkBAAIERmbAzVq_GUh6nNv_CkJWScAesYNbAALJ4TEbXDEISpwOAAFViUNyqQEAAwIAA3gAAzUE.jpg"
+    },
+    {
+        "id": "3",
+        "coords": [
+            55.856659,
+            38.453607
+        ],
+        "header": "Стадион при МБОУ Центр образования №4",
+        "body": "г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Сидоров Сидор Сидорович",
+        "footer": "Категория: Открытый",
+        "photos": [
+            "photos/3_1.jpg",
+            "photos/3_2.jpg"
+        ],
+        "photo": "photos/AgACAgIAAxkBAAIERmbAzVq_GUh6nNv_CkJWScAesYNbAALJ4TEbXDEISpwOAAFViUNyqQEAAwIAA3gAAzUE.jpg"
     }
 ]
