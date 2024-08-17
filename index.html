@@ -9,14 +9,12 @@
         ymaps.ready(init);
 
         function init() {
-            // Создание карты, центрируем на Ногинске
             var myMap = new ymaps.Map("map", {
-                center: [55.866735, 38.463233], // Центр карты (Ногинск)
+                center: [55.866735, 38.463233],
                 zoom: 12
             });
 
-            // Загрузка меток из JSON-файла
-            fetch('placemarks.json')
+            fetch('https://denalex33.github.io/noginsk_map.github.io/placemarks.json')
                 .then(response => response.json())
                 .then(placemarks => {
                     placemarks.forEach(function(item) {
