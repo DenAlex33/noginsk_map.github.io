@@ -1,0 +1,48 @@
+[
+    {
+        "id": "1",
+        "coords": [
+            55.882409,
+            38.45394
+        ],
+        "header": "Стадион при МБОУ 'Центр образования № 1 имени Героя России Андрея Завьялкина'",
+        "body": "г. Ногинск, ул. Советской Конституции, д. 16<br>Депутат: Иванов Иван Иванович",
+        "footer": "Категория: Открытый",
+        "photos": [
+            "photos/1_1.jpg",
+            "photos/1_2.jpg",
+            "photos/1_1.jpg"
+        ],
+        "photo": "photos/AgACAgIAAxkBAAIEWmbAzchYls7c_9syeQPP-UDgMJ0SAAIb4jEbXDEISqBIP7Hkx-PPAQADAgADeQADNQQ.jpg"
+    },
+    {
+        "id": "2",
+        "coords": [
+            55.838637,
+            38.404362
+        ],
+        "header": "Стадион при МБОУ Центр образования № 3",
+        "body": "г. Ногинск, ул. Юбилейная, д. 13<br>Депутат: Петров Петр Петрович",
+        "footer": "Категория: Открытый",
+        "photos": [
+            "photos/2_1.jpg",
+            "photos/2_2.jpg"
+        ],
+        "photo": "photos/AgACAgIAAxkBAAIEVWbAzZ9Lhiivp39orZ3ih5b3VrX8AALS4TEbXDEISkv1gNtzZwhIAQADAgADeQADNQQ.jpg"
+    },
+    {
+        "id": "3",
+        "coords": [
+            55.856659,
+            38.453607
+        ],
+        "header": "Стадион при МБОУ Центр образования №4",
+        "body": "г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Сидоров Сидор Сидорович",
+        "footer": "Категория: Открытый",
+        "photos": [
+            "photos/3_1.jpg",
+            "photos/3_2.jpg"
+        ],
+        "photo": "photos/AgACAgIAAxkBAAIERmbAzVq_GUh6nNv_CkJWScAesYNbAALJ4TEbXDEISpwOAAFViUNyqQEAAwIAA3gAAzUE.jpg"
+    }
+]
