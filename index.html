@@ -4,93 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карта Богородского городского округа, Московской области</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=<YOUR_API_KEY>&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0992222e-52c1-423d-b38b-28670ce193ae&lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
         ymaps.ready(init);
 
         function init() {
+            // Создание карты, центрируем на Ногинске
             var myMap = new ymaps.Map("map", {
                 center: [55.866735, 38.463233], // Центр карты (Ногинск)
                 zoom: 12
             });
 
-            // Добавление меток
-            var placemarks = [
-                {
-                    coords: [55.866345, 38.445678], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 1 имени Героя России Андрея Завьялкина"',
-                    body: 'г. Ногинск, ул. Советской Конституции, д. 16<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.868000, 38.464000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 3"',
-                    body: 'г. Ногинск, ул. Юбилейная, д. 13<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.870000, 38.470000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования №4"',
-                    body: 'г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.872000, 38.455000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования "Богородский"',
-                    body: 'г. Ногинск, ул. 2-ая Глуховская, д. 11<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.865000, 38.467000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 8"',
-                    body: 'г. Ногинск, ул. Юбилейная, д. 3<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.867500, 38.470500], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 9 им. Маршала Жукова Г.К."',
-                    body: 'г. Ногинск, ул. Текстилей, д. 17<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.866800, 38.471000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 10"',
-                    body: 'г. Ногинск, ул. Новая, д. 1<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.869000, 38.468000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 12 имени Героя Советского Союза И.А. Маликова"',
-                    body: 'г. Ногинск, ул Аэроклубная, д. 4<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.860000, 38.460000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования № 17"',
-                    body: 'г. Ногинск, ул. Белякова, д. 21А<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                },
-                {
-                    coords: [55.830000, 38.450000], // Примерные координаты
-                    header: 'Стадион при МБОУ "Центр образования Купавинский"',
-                    body: 'г. Старая Купавна, ул. Большая Московская, д. 76А<br>Депутат: Не указан',
-                    footer: 'Категория: Открытый'
-                }
-            ];
+            // Загрузка меток из JSON-файла
+            fetch('placemarks.json')
+                .then(response => response.json())
+                .then(placemarks => {
+                    placemarks.forEach(function(item) {
+                        var placemark = new ymaps.Placemark(item.coords, {
+                            balloonContentHeader: item.header,
+                            balloonContentBody: item.body + '<br><img src="' + item.photo + '" alt="Фото" style="width:100px;">',
+                            balloonContentFooter: item.footer
+                        });
 
-            placemarks.forEach(function(item) {
-                var placemark = new ymaps.Placemark(item.coords, {
-                    balloonContentHeader: item.header,
-                    balloonContentBody: item.body,
-                    balloonContentFooter: item.footer
-                });
-
-                myMap.geoObjects.add(placemark);
-            });
+                        myMap.geoObjects.add(placemark);
+                    });
+                })
+                .catch(error => console.error('Ошибка загрузки меток:', error));
         }
     </script>
 </head>
 <body>
-    <div id="map" style="width: 100%; height: 100vh;"></div>
+    <div id="map" style="width: 100%; height: 500px;"></div>
 </body>
 </html>
