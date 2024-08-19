@@ -1,15 +1,16 @@
 [
     {
-        "id": "1",
-        "coords": [
-            55.882409,
-            38.45394
-        ],
-        "header": "Стадион при МБОУ 'Центр образования № 1 имени Героя России Андрея Завьялкина'",
-        "body": "г. Ногинск, ул. Советской Конституции, д. 16<br>Депутат: Иванов Иван Иванович",
-        "footer": "Категория: Открытый",
-        "photo": "https://raw.githubusercontent.com/DenAlex33/noginsk_map.github.io/main/photos/AgACAgIAAxkBAAIFYGbDQT1l1HCIOtDdeHf0CvVkUjiEAAL33zEbAVgYSgIzktyvWz5XAQADAgADeQADNQQ.jpg"
-    },
+    "id": "1",
+    "coords": [
+        55.882409,
+        38.45394
+    ],
+    "header": "Стадион при МБОУ 'Центр образования № 1 имени Героя России Андрея Завьялкина'",
+    "body": "г. Ногинск, ул. Советской Конституции, д. 16<br>Депутат: Иванов Иван Иванович",
+    "footer": "Категория: Открытый",
+    "photo": "https://github.com/DenAlex33/noginsk_map.github.io/blob/main/photos/AgACAgIAAxkBAAIFt2bDmvc1hBA9U-3VL5oznSWE3znYAAJM4jEbAVgYSmMTyVOO4CpXAQADAgADeAADNQQ.jpg?raw=true"
+}
+,
     {
         "id": "2",
         "coords": [
