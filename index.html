@@ -8,29 +8,28 @@
     <script type="text/javascript">
         ymaps.ready(init);
 
-function init() {
-    var myMap = new ymaps.Map("map", {
-        center: [55.866735, 38.463233],
-        zoom: 12
-    });
-
-    fetch('https://denalex33.github.io/noginsk_map.github.io/placemarks.json')
-        .then(response => response.json())
-        .then(placemarks => {
-            placemarks.forEach(function(item) {
-                var placemark = new ymaps.Placemark(item.coords, {
-                    balloonContentHeader: item.header,
-                    balloonContentBody: item.body + '<br><img src="' + item.photo + '" alt="Фото" style="width:200px;">',
-                    balloonContentFooter: item.footer
-                });
-
-                myMap.geoObjects.add(placemark);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.866735, 38.463233],
+                zoom: 12
             });
-        })
-        .catch(error => console.error('Ошибка загрузки меток:', error));
-}
 
+            // Вставьте код сюда
+            fetch('https://denalex33.github.io/noginsk_map.github.io/placemarks.json')
+                .then(response => response.json())
+                .then(placemarks => {
+                    placemarks.forEach(function(item) {
+                        var placemark = new ymaps.Placemark(item.coords, {
+                            balloonContentHeader: item.header,
+                            balloonContentBody: item.body + '<br><img src="' + item.photo + '" alt="Фото" style="width:200px;">',
+                            balloonContentFooter: item.footer
+                        });
 
+                        myMap.geoObjects.add(placemark);
+                    });
+                })
+                .catch(error => console.error('Ошибка загрузки меток:', error));
+        }
     </script>
     <style>
         body {
