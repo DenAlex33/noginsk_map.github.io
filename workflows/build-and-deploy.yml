@@ -9,43 +9,43 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v2
+        name: Checkout code
+
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
-      
-      - name: Install dependencies
-        run: bundle install
-      
-      - name: Build site
-        run: bundle exec jekyll build
-      
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
+        name: Setup Ruby
+
+      - run: bundle install
+        name: Install dependencies
+
+      - run: bundle exec jekyll build
+        name: Build Jekyll site
+
+      - uses: actions/upload-artifact@v2
         with:
           name: site
           path: _site
+        name: Upload artifacts
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Download build artifacts
-        uses: actions/download-artifact@v2
+      - uses: actions/checkout@v2
+        name: Checkout code
+
+      - uses: actions/download-artifact@v2
         with:
           name: site
-      
-      - name: Sync build to public directory
-        run: rsync -r _site/ ./public/
-      
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        name: Download artifacts
+
+      - run: rsync -r _site/ ./public/
+        name: Sync files
+
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+        name: Deploy to GitHub Pages
