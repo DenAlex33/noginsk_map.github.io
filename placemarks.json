@@ -8,7 +8,7 @@
         "header": "Стадион при МБОУ 'Центр образования № 1 имени Героя России Андрея Завьялкина'",
         "body": "г. Ногинск, ул. Советской Конституции, д. 16<br>Депутат: Иванов Иван Иванович",
         "footer": "Категория: Открытый",
-        "photo": "https://raw.githubusercontent.com/DenAlex33/noginsk_map.github.io/main/photos/AgACAgIAAxkBAAIFP2bDMWzUf3qTYy4LN40kmGVNwt9vAAIg3zEbAVgYShEl4twOxkK1AQADAgADeAADNQQ.jpg"
+        "photo": "https://raw.githubusercontent.com/DenAlex33/noginsk_map.github.io/main/photos/AgACAgIAAxkBAAIFYGbDQT1l1HCIOtDdeHf0CvVkUjiEAAL33zEbAVgYSgIzktyvWz5XAQADAgADeQADNQQ.jpg"
     },
     {
         "id": "2",
@@ -18,7 +18,8 @@
         ],
         "header": "Стадион при МБОУ Центр образования № 3",
         "body": "г. Ногинск, ул. Юбилейная, д. 13<br>Депутат: Петров Петр Петрович",
-        "footer": "Категория: Открытый"
+        "footer": "Категория: Открытый",
+        "photo": "https://raw.githubusercontent.com/DenAlex33/noginsk_map.github.io/main/photos/AgACAgIAAxkBAAIFW2bDQL0V9UVnSBmlh-0STUg-DU8dAAL03zEbAVgYSiLhZRJWXWNCAQADAgADeAADNQQ.jpg"
     },
     {
         "id": "3",
@@ -28,6 +29,7 @@
         ],
         "header": "Стадион при МБОУ Центр образования №4",
         "body": "г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Сидоров Сидор Сидорович",
-        "footer": "Категория: Открытый"
+        "footer": "Категория: Открытый",
+        "photo": "https://raw.githubusercontent.com/DenAlex33/noginsk_map.github.io/main/photos/AgACAgIAAxkBAAIFU2bDPNffRj7T7_UH0lKW-OzNBIGbAAJ-3zEbAVgYSpYHpNDbRm1DAQADAgADeAADNQQ.jpg"
     }
 ]
