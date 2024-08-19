@@ -20,12 +20,7 @@
                     placemarks.forEach(function(item) {
                         var placemark = new ymaps.Placemark(item.coords, {
                             balloonContentHeader: item.header,
-                            balloonContentBody: `
-                                <div>
-                                    ${item.body}<br>
-                                    <img src="${item.photo}" alt="Фото" style="width:200px; height:auto;">
-                                </div>
-                            `,
+                            balloonContentBody: item.body + '<br><img src="' + item.photo + '" alt="Фото" style="width:200px;">',
                             balloonContentFooter: item.footer
                         });
 
@@ -36,25 +31,19 @@
         }
     </script>
     <style>
-        html, body {
+        body {
             margin: 0;
             padding: 0;
-            height: 100%;
         }
         #map {
             width: 100%;
-            height: calc(100% - 50px);
+            height: 100vh; /* Полный экран */
         }
         .footer {
             text-align: center;
             padding: 10px;
             background-color: #f1f1f1;
             font-size: 14px;
-            height: 50px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
         }
         .footer a {
             color: #007bff;
