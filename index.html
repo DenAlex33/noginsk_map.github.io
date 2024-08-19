@@ -31,19 +31,25 @@
         }
     </script>
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
+            height: 100%;
         }
         #map {
             width: 100%;
-            height: 500px;
+            height: calc(100% - 50px); /* Учитываем высоту футера */
         }
         .footer {
             text-align: center;
             padding: 10px;
             background-color: #f1f1f1;
             font-size: 14px;
+            height: 50px; /* Высота футера */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
         }
         .footer a {
             color: #007bff;
@@ -54,7 +60,7 @@
 <body>
     <div id="map"></div>
     <div class="footer">
-        Разработал <a href="https://github.com/DenAlex33" target="_blank">DenAlex33</a>
+        Разработано <a href="https://github.com/DenAlex33" target="_blank">DenAlex33</a>
     </div>
 </body>
 </html>
