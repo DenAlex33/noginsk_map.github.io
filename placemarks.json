@@ -8,12 +8,7 @@
         "header": "Стадион при МБОУ 'Центр образования № 1 имени Героя России Андрея Завьялкина'",
         "body": "г. Ногинск, ул. Советской Конституции, д. 16<br>Депутат: Иванов Иван Иванович",
         "footer": "Категория: Открытый",
-        "photos": [
-            "photos/1_1.jpg",
-            "photos/1_2.jpg",
-            "photos/1_1.jpg"
-        ],
-        "photo": "photos/AgACAgIAAxkBAAIEWmbAzchYls7c_9syeQPP-UDgMJ0SAAIb4jEbXDEISqBIP7Hkx-PPAQADAgADeQADNQQ.jpg"
+        "photo": "https://raw.githubusercontent.com/DenAlex33/noginsk_map.github.io/main/photos/AgACAgIAAxkBAAIFE2bDIjBQuB8ydUCD9aa_T_w2b-r4AAIb3zEbAVgYSlDKcFeYNrtBAQADAgADeQADNQQ.jpg"
     },
     {
         "id": "2",
@@ -24,11 +19,7 @@
         "header": "Стадион при МБОУ Центр образования № 3",
         "body": "г. Ногинск, ул. Юбилейная, д. 13<br>Депутат: Петров Петр Петрович",
         "footer": "Категория: Открытый",
-        "photos": [
-            "photos/2_1.jpg",
-            "photos/2_2.jpg"
-        ],
-        "photo": "photos/AgACAgIAAxkBAAIEVWbAzZ9Lhiivp39orZ3ih5b3VrX8AALS4TEbXDEISkv1gNtzZwhIAQADAgADeQADNQQ.jpg"
+        "photo": "photos/AgACAgIAAxkBAAIE82bA8r-4V6o39eqkAAGw1oPxfco8gwACa-MxG1wxCEqH5E_HDGE1-gEAAwIAA3kAAzUE.jpg"
     },
     {
         "id": "3",
@@ -39,25 +30,6 @@
         "header": "Стадион при МБОУ Центр образования №4",
         "body": "г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Сидоров Сидор Сидорович",
         "footer": "Категория: Открытый",
-        "photos": [
-            "photos/3_1.jpg",
-            "photos/3_2.jpg"
-        ],
-        "photo": "photos/AgACAgIAAxkBAAIERmbAzVq_GUh6nNv_CkJWScAesYNbAALJ4TEbXDEISpwOAAFViUNyqQEAAwIAA3gAAzUE.jpg"
-    },
-    {
-        "id": "3",
-        "coords": [
-            55.856659,
-            38.453607
-        ],
-        "header": "Стадион при МБОУ Центр образования №4",
-        "body": "г. Ногинск, ул. Комсомольская, д. 3<br>Депутат: Сидоров Сидор Сидорович",
-        "footer": "Категория: Открытый",
-        "photos": [
-            "photos/3_1.jpg",
-            "photos/3_2.jpg"
-        ],
-        "photo": "photos/AgACAgIAAxkBAAIERmbAzVq_GUh6nNv_CkJWScAesYNbAALJ4TEbXDEISpwOAAFViUNyqQEAAwIAA3gAAzUE.jpg"
+        "photo": "photos/AgACAgIAAxkBAAIE7mbA8l-YIFqqwe8Y90QRnmRUej8lAAJr4zEbXDEISofkT8cMYTX6AQADAgADeQADNQQ.jpg"
     }
 ]
